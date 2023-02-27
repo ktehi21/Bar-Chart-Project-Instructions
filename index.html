@@ -7,15 +7,92 @@
 <script src="package.json"></script>
 <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
 <style>
+  input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 250px;
+    padding: 5px;
+  }
+  #cCheck{
+    background-color: bisque;
+    border: none;
+    margin-top: 10px;
+    width: 263px;
+  }
 
+  #drawChart{
+    width: 600px;
+    margin: 50px 0px;
+    padding: 50px;
+    background-color: #fff;
+  }
+  .chartArea{
+    height: 500px;
+    position: relative;
+  }
+  .yAxis{
+    width: 50px; height: 500px;
+    border-right: 1px solid #000;
+    position: absolute;
+    left: 0; top: 0;
+  }
+  .yAixs p{
+    color: rgb(0, 0, 0);
+    font-size: 24pt;
+  }
+  .xAxis{
+    width: 550px; height: 500px;
+    border-bottom: 1px solid #000;
+    background-color: red;
+    float: right;
+  }
+  .chartName h3{
+    font-size: 30px;
+    text-align: center;
+  }
 </style>
 </head>
 
 <body>
 
+  <section id="inputs">
+    <form>
+      <label for="cname">Chart Name: </label><br>
+      <input type="text" id="cname" name="cname"><br>
+      <label for="vName">Item Name:</label><br>
+      <input type="text" id="vName" name="vName" value="item name, item name, item name..."><br>
+      <label for="cValues">Values:</label><br>
+      <input type="text" id="cValues" name="cValues" value="number, number, number..."><br>
+      <input type="button" id="cCheck" onclick="checkChart()" value="See the Chart">
+    </form>
+  </section>
+  <section id="drawChart">
+    <div class="chartArea">
+      <div class="yAxis">
+        <p>30</p>
+        <p>2</p>
+        <p>70</p>
+      </div>
+      <div class="xAxis">
+      </div>
+    </div>
 
+    <div class="chartName">
+      <h3 class="cName">Ladkfjeid</h3>
+    </div>
+  </section>
 <script>
-  drawBarChart(data, options, element);
+$(document).ready(){
+  function checkChart(){
+    let data = [cValues];
+    let options = function (vName.length){
+
+    }
+  }
+  function drawBarChart(data, options, element){
+
+  }
+}
 </script>
 </body>
 </html>
